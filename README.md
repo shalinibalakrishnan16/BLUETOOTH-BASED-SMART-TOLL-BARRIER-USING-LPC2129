@@ -11,30 +11,47 @@ Components Used
 1.Hardware Requirements
 
 LPC2129 ARM7 Microcontroller
+
 Bluetooth Module (HC-05 / HC-06)
+
 Servo Motor
+
 16×2 LCD Display
+
 LED
+
 External Trigger / Sensor
+
 Power Supply
+
 Connecting Wires
 
 2.Software Requirements
 
 Keil µVision IDE
+
 Embedded C
+
 Proteus Design Suite (for simulation, if used)
 
 Working Principle
 
 1.Initially, the LPC2129 microcontroller initializes UART0, LCD, PWM and external interrupt configurations.
+
 2.When an external event occurs, EINT0 is triggered.
+
 3.The LCD displays a detection message.
+
 4.The system prompts the user to send a command through Bluetooth.
+
 5.The Bluetooth module transmits the command to the LPC2129 through UART0.
+
 6.The microcontroller receives and compares the command using the strcmp() function.
+
 7.If the received command is OPEN, the PWM output controls the servo motor to move the barrier to the open position.
+
 8.If the received command is CLOSE, the servo motor returns the barrier to the closed position.
+
 9.Finally, the LCD displays the corresponding gate status.
 
 Technical Implementation
@@ -54,9 +71,13 @@ A 16×2 LCD is interfaced in 4-bit mode to display system messages and gate stat
 Applications
 
 1.Automated toll barrier systems
+
 2.Parking management systems
+
 3.Residential gate access control
+
 4.Industrial entry control systems
+
 5.Wireless access control applications
 
 Advantages
