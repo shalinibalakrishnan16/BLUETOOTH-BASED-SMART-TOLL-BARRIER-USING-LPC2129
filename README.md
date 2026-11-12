@@ -1,4 +1,4 @@
-Bluetooth-Based Wireless Smart Toll Barrier using LPC2149
+Bluetooth-Based Wireless Smart Toll Barrier using LPC2129
 
 A low-cost wireless toll barrier built on an ARM7 LPC2149 microcontroller. An IR sensor detects a vehicle, the system alerts the operator over Bluetooth, and the operator opens or closes the gate by sending a text command from a smartphone. A servo motor lifts and lowers the barrier.
 
