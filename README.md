@@ -7,6 +7,7 @@ Abstract
 This project uses an LPC2149 (ARM7) microcontroller with an IR sensor and a Bluetooth module to build a wireless barrier gate. When the IR sensor detects a vehicle through an external interrupt, the LCD shows a "VEHICLE FOUND" message and a request is sent to the operator's smartphone over Bluetooth. The operator replies with "OPEN" or "CLOSE", and the servo motor lifts or lowers the barrier. An LED shows the gate status. The system lets the operator control the gate from a distance and is a low-cost solution for societies, campuses and factories.
 
 Components Used
+
 1.Hardware Requirements
 
 LPC2129 ARM7 Microcontroller
@@ -61,7 +62,11 @@ Applications
 Advantages
 
 1.Wireless gate operation
+
 2.Reduced manual intervention
+
 3.Simple and cost-effective control system
+
 4.Real-time status indication
+
 5.Accurate servo-based barrier movement
