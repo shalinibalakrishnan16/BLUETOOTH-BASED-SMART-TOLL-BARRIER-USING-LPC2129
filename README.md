@@ -1,10 +1,10 @@
 Bluetooth-Based Wireless Smart Toll Barrier using LPC2129
 
-A low-cost wireless toll barrier built on an ARM7 LPC2149 microcontroller. An IR sensor detects a vehicle, the system alerts the operator over Bluetooth, and the operator opens or closes the gate by sending a text command from a smartphone. A servo motor lifts and lowers the barrier.
+A low-cost wireless toll barrier built on an ARM7 LPC2129 microcontroller. An IR sensor detects a vehicle, the system alerts the operator over Bluetooth, and the operator opens or closes the gate by sending a text command from a smartphone. A servo motor lifts and lowers the barrier.
 
 Abstract
 
-This project uses an LPC2149 (ARM7) microcontroller with an IR sensor and a Bluetooth module to build a wireless barrier gate. When the IR sensor detects a vehicle through an external interrupt, the LCD shows a "VEHICLE FOUND" message and a request is sent to the operator's smartphone over Bluetooth. The operator replies with "OPEN" or "CLOSE", and the servo motor lifts or lowers the barrier. An LED shows the gate status. The system lets the operator control the gate from a distance and is a low-cost solution for societies, campuses and factories.
+This project uses an LPC2129 (ARM7) microcontroller with an IR sensor and a Bluetooth module to build a wireless barrier gate. When the IR sensor detects a vehicle through an external interrupt, the LCD shows a "VEHICLE FOUND" message and a request is sent to the operator's smartphone over Bluetooth. The operator replies with "OPEN" or "CLOSE", and the servo motor lifts or lowers the barrier. An LED shows the gate status. The system lets the operator control the gate from a distance and is a low-cost solution for societies, campuses and factories.
 
 Components Used
 
@@ -57,15 +57,19 @@ Working Principle
 Technical Implementation
 
 UART Communication
+
 UART0 is used for serial communication between the Bluetooth module and the LPC2129 microcontroller. It handles the transmission and reception of wireless control commands.
 
 PWM Generation
+
 PWM5 is configured on pin P0.21 to control the servo motor. The servo position is controlled by varying the PWM pulse width.
 
 External Interrupt
+
 External Interrupt 0 (EINT0) is configured on pin P0.16 to detect an external triggering event and initiate the gate-control operation.
 
 LCD Interfacing
+
 A 16×2 LCD is interfaced in 4-bit mode to display system messages and gate status.
 
 Applications
