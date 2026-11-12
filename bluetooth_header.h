@@ -7,20 +7,20 @@ void str_tx(char*);
 char str[20];
 void config_uart0(void)
 {
-	PINSEL0=0X05;
-	U0LCR=0X83;
-	U0DLL=97;
+	PINSEL0=0X05;      
+	U0LCR=0X83;        
+	U0DLL=97;          
 	U0DLM=0;
-	U0LCR=0X03;
+	U0LCR=0X03;        
 }
 void tx_uart0(char ch)
 {
-	while((U0LSR>>5)&1==0);
+	while(((U0LSR>>5)&1)==0);   
 	U0THR=ch;
 }
 char rx_uart(void)
 {
-	while((U0LSR&0X01)==0);
+	while((U0LSR&0X01)==0);     
 	return U0RBR;
 }
 char *str_rx(void)
@@ -52,10 +52,9 @@ char *str_rx(void)
     return str;
 }
 
-void str_tx(char*str)
+void str_tx(char*s)
 {
-	while(*str){
-	tx_uart0(*str++);
+	while(*s){
+	tx_uart0(*s++);
 }
 }
-
